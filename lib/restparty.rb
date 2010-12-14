@@ -1,4 +1,4 @@
-class Resource
+class RestParty
   include HTTParty
 
   attr_reader :resource
