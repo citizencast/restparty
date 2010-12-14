@@ -13,7 +13,7 @@ require 'jeweler'
 Jeweler::Tasks.new do |gem|
   # gem is a Gem::Specification... see http://docs.rubygems.org/read/chapter/20 for more options
   gem.name = "restparty"
-  gem.homepage = "http://github.com/mickey/restparty"
+  gem.homepage = "http://github.com/citizencast/restparty"
   gem.license = "MIT"
   gem.summary = "Add ressource love to your party !"
   gem.description = "Add ressource love to your party !"
