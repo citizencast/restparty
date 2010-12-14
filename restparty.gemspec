@@ -24,6 +24,7 @@ Gem::Specification.new do |s|
     "README.rdoc",
     "Rakefile",
     "lib/restparty.rb",
+    "restparty.gemspec",
     "test/helper.rb",
     "test/test_restparty.rb"
   ]
