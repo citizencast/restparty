@@ -10,11 +10,8 @@ RestParty is a simple wrapper around HTTParty allowing you to handle simple oper
 This simple piece of code will generate basics CRUD operations and allow you to :
 
   User.find(1)
-
   User.find(:all)
-
   User.create({:name => "Mike", :email => "mike@mike.com"})
-
   User.delete(1)
 
 All of this methods can take a 2nd optional argument :
@@ -25,11 +22,11 @@ The resource_for can also take few arguments :
 
 * only, except
 
-  resource_for :user_sessions, :only => [:create, :delete]
+    resource_for :user_sessions, :only => [:create, :delete]
 
 * member, collection
 
-  resource_for :auditions, :except => [:delete, :update], :member => {:rate => :post, :comment => :post}, :collection => {:search => :get}
+    resource_for :auditions, :except => [:delete, :update], :member => {:rate => :post, :comment => :post}, :collection => {:search => :get}
 
 This will allow you to add basic operations as :
 
