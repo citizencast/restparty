@@ -34,6 +34,16 @@ This will allow you to add basic operations as :
   Audition.comment(2, {:comment => "Now we're talking !"})
   Audition.search(:q => "Mike")
 
+Of course You can use your RestParty class like a basic HTTparty class everything works as expected :
+
+ class User < RestParty
+  resource_for :users
+  format :json
+  base_uri 'localhost:3000'
+  auth_digest "login", "pass"
+ end
+
+
 == Contributing to restparty
  
 * Check out the latest master to make sure the feature hasn't been implemented or the bug hasn't been fixed yet
