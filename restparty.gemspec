@@ -33,7 +33,7 @@ Gem::Specification.new do |s|
   s.licenses = ["MIT"]
   s.require_paths = ["lib"]
   s.rubygems_version = %q{1.3.7}
-  s.summary = %q{Add ressource love to your party !}
+  s.summary = %q{Add ressource love to your party ! Simple HTTParty wrapper to consume restful webservices}
   s.test_files = [
     "test/helper.rb",
     "test/test_restparty.rb"
