@@ -5,13 +5,13 @@
 
 Gem::Specification.new do |s|
   s.name = %q{restparty}
-  s.version = "0.0.2"
+  s.version = "0.0.3"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Michael Bensoussan", "Pierre Boutbel"]
-  s.date = %q{2010-12-14}
+  s.date = %q{2010-12-15}
   s.description = %q{Add ressource love to your party !}
-  s.email = %q{pada51@gmail.com}
+  s.email = %q{mbensoussan.is@gmail.com}
   s.extra_rdoc_files = [
     "LICENSE.txt",
     "README.rdoc"
