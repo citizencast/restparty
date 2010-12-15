@@ -43,6 +43,9 @@ Of course You can use your RestParty class like a basic HTTparty class everythin
   auth_digest "login", "pass"
  end
 
+== TODO
+
+* Handle exceptions
 
 == Contributing to restparty
  
