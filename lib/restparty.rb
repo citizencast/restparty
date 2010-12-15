@@ -54,7 +54,7 @@ class RestParty
           elsif id.to_s =~ /^[-+]?[0-9]+$/ and #{@resource_methods.include?(:show)}
             response = get('/#{@resource}/'+id.to_s, :query => options)
           else
-            raise "error"
+            raise ArgumentError, "only :all, 'all' or integer values are supported"
           end
         end
       }
