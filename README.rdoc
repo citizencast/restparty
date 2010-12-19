@@ -45,7 +45,8 @@ Of course You can use your RestParty class like a basic HTTparty class everythin
 
 == TODO
 
-* Handle exceptions
+* Handle association ?
+* Handle Resource errors
 
 == Contributing to restparty
  
