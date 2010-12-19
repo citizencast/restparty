@@ -51,7 +51,7 @@ class RestParty
           response = ""
           if id.to_s == "all" and #{@resource_methods.include?(:index)}
             response = get('/#{@resource}', :query => options)
-          elsif id.to_s =~ /^[-+]?[0-9]+$/ and #{@resource_methods.include?(:show)}
+          elsif #{@resource_methods.include?(:show)}
             response = get('/#{@resource}/'+id.to_s, :query => options)
           else
             raise ArgumentError, "only :all, 'all' or integer values are supported"
