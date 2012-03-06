@@ -32,7 +32,7 @@ class RestParty
     def build_delete
       class_eval %{
         def self.delete(id, options = {})
-          delete('/#{@resource}/'+id.to_s, :query => options)
+          delete('/#{@resource}/'+id.to_s, options)
         end
       }
     end
@@ -40,7 +40,7 @@ class RestParty
     def build_update
       class_eval %{
         def self.update(id, options = {})
-          put('/#{@resource}/'+id.to_s, :query => options, :headers => {'Content-Length' => '0'})
+          put('/#{@resource}/'+id.to_s, options)
         end
       }
     end
@@ -50,9 +50,9 @@ class RestParty
         def self.find(id, options = {})
           response = ""
           if id.to_s == "all" and #{@resource_methods.include?(:index)}
-            response = get('/#{@resource}', :query => options)
+            response = get('/#{@resource}', options)
           elsif #{@resource_methods.include?(:show)}
-            response = get('/#{@resource}/'+id.to_s, :query => options)
+            response = get('/#{@resource}/'+id.to_s, options)
           else
             raise ArgumentError, "only :all, 'all' or integer values are supported"
           end
@@ -63,7 +63,7 @@ class RestParty
     def build_create
       class_eval %{
         def self.create(options = {})
-          post('/#{@resource}', :query => options)
+          post('/#{@resource}', options)
         end
       }
     end
@@ -73,7 +73,7 @@ class RestParty
         raise 'error_http_method' unless valid_http_method?(method)
         class_eval %{
           def self.#{collection}(options = {})
-          #{method}('/#{@resource}/#{collection}', :query => options)
+          #{method}('/#{@resource}/#{collection}', options)
           end
         }
       end
@@ -84,7 +84,7 @@ class RestParty
         raise 'error_method' unless valid_http_method?(method)
         class_eval %{
           def self.#{member}(id, options = {})
-          #{method}('/#{@resource}/'+id.to_s+'/#{member}', :query => options)
+          #{method}('/#{@resource}/'+id.to_s+'/#{member}', options)
           end
         }
       end
